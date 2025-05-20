@@ -124,7 +124,7 @@ def build_sam2_camera_predictor(
         raise RuntimeError()
 
     _load_checkpoint(model, ckpt_path)
-    model = model.to(device)
+    #model = model.to(device)
     if mode == "eval":
         model.eval()
     return model
