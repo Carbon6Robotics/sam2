@@ -90,7 +90,7 @@ def build_sam2_camera_predictor(
         os.path.dirname(__file__), "checkpoints", "sam2.1_hiera_large.pt"
     )
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    config_file = "configs/sam2.1/sam2.1_hiera_l.yaml"
+    config_file = "sam2_config/sam2.1/sam2.1_hiera_l.yaml"
 
     hydra_overrides = [
         "++model._target_=sam2.sam2_camera_predictor.SAM2CameraPredictor",
